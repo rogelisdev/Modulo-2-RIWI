@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cuerpo de la pagina web responsive, fondo, tamaño*/
+body {
+    background-color: #f4ddb8;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        background-color: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        background-color: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: none;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        background-color: none;
+    }
+}
+
+/*Seccion principal incluye; logo, titulo y navegadores. Alineados, separados, tamaños y color de letras y de fondo.*/
+.Seccion-Principal {
+    background-color: #6a6f4c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+}
+
+#Logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+#Logo h1 {
+    font-size: 3em;
+}
+
+#Logo img {
+    max-width: 70px;
+}
+
+.Navegadores {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.Navegadores a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+}
+
+.Navegadores a:hover {
+    color: white;
+}
+
+/*Area principal del contenido fondo, alineacion, margen, display, tamaño, sombras, animacion, transicion*/
+
+.Presentacion {
+    background: linear-gradient(#ab7743, #6a6f4c);
+
+    border-radius: 40px;
+    box-shadow: 0 0 10px;
+    margin: 8% 10px 0 10px;
+    padding: 10px;
+
+}
+
+@keyframes pulso {
+
+    0%,
+    50%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    30%,
+    80% {
+        transform: scale(0.92, 0.95);
+    }
+}
+
+
+#P1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#P1 p {
+    font-size: 30px;
+    text-align: justify;
+    margin: 20px;
+
+}
+
+#P1 img {
+    max-width: 400px;
+    max-height: auto;
+    margin: 20px;
+
+    animation: 8s ease 0s infinite pulso;
+}
+#Texto1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Texto1 p {
+    font-size: 60px;
+}
+
+#Texto1 p:hover {
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+/*Titulo principal de seccion de productos  alineacion, margen, tamaño*/
+
+.Titulo-2 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Primera seccion de productos fondo, alineacion, margen, display, tamaño, sombras, animacion*/
+
+.Productos {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 300px;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+.Item1, .Item6 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+
+.Item2, .Item7 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.Item3, .Item8 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.Item4, .Item9 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.Item5, .Item10 {
+    display: flex;
+    justify-content: center;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.Item1 img, .Item2 img, .Item3 img, .Item4 img, .Item5 img, .Item6 img, .Item7 img, .Item8 img, .Item9 img, .Item10 img{
+    object-fit: cover;
+    border-radius: 60px;
+     box-shadow: 0 0 20px ;
+    width: 100%;
+    height: 100%;
+}
+
+.Item1 img:hover, .Item2 img:hover, .Item3 img:hover, .Item4 img:hover, .Item5 img:hover, .Item6 img:hover, .Item7 img:hover, .Item8 img:hover, .Item9 img:hover, .Item10 img:hover{
+    transform: translate(0, 10px);
+    transition: .5s;
+}
+/*Area productos fondo, alineacion, margen, display, tamaño, sombras*/
+.Info-Productos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.Info-Productos h2{
+    text-align: start;
+    font-size: 50px;
+    margin: 20px;
+}
+
+.primero{
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.primero img{
+    border-radius: 80px;
+    width: 200px;
+    height: 200px;
+}
+
+.primero img:hover{
+    -webkit-transform: rotateY(180deg);
+-webkit-transform-style: preserve-3d;
+transform: rotateY(180deg);
+transform-style: preserve-3d;}
+
+
+.primero h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.primero p{
+    background: linear-gradient(#ab7743, #6a6f4c);
+    margin: 10px;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.Info-Productos2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.Info-Productos2 h2{
+    text-align: start;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.segundo{
+    margin: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.segundo img{
+    border-radius: 40px;
+    width: 200px;
+    height: 300px;
+}
+
+.segundo img:hover{
+ -webkit-transform: rotateY(180deg);
+-webkit-transform-style: preserve-3d;
+transform: rotateY(180deg);
+transform-style: preserve-3d;}
+
+
+.segundo h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 10px;
+    padding: 20px;
+
+}
+
+.segundo p{
+    background: linear-gradient(#ab7743, #6a6f4c);
+    margin: 10px;
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+/*Area de informacion fondo, alineacion, margen, display, tamaño */
+
+.Nosotros{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.T2 h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.T2 img{
+    animation: 3s ease 0s infinite pulso;
+    margin-top: 20px;
+}
+
+.P2{
+    margin: 40px;
+    padding: 10px;
+}
+
+.P2 h3{
+    font-size: 40px;
+    text-align: center;
+}
+
+.P2 p{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/*Area de contacto; fondo, alineacion, margen, display*/
+
+.Contacto{
+    background-color: #ab7743;
+}
+
+#contact{
+    font-size: 30px;
+    text-align: start;
+    gap: 20px;
+    margin: 20px;
+}
+
+.copy{
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
